@@ -72,3 +72,4 @@ input.bad{border-color:var(--danger)}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 .hero .next p{color:inherit}
+.hero .next p{color:inherit}
