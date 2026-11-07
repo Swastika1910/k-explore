@@ -71,3 +71,4 @@ input.bad{border-color:var(--danger)}
  nav.open{display:flex}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.hero .next p{color:inherit}
