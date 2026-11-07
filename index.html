@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K Explore – Discover and Register for Events</title>
+<meta name="description" content="Browse upcoming events, view details and register in seconds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a href="#home" class="logo">K<span>Explore</span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  <nav id="menu">
+    <a href="#home">Home</a>
+    <a href="#events">Events</a>
+    <a href="#registrations">My registrations</a>
+    <button id="themeBtn" class="theme" aria-label="Switch dark or light mode">◐</button>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>Find the event worth leaving your room for.</h1>
+    <p>Hackathons, concerts, workshops and fests from across campus. Browse, filter and register in under a minute.</p>
+    <a class="btn" href="#events">Browse events</a>
+  </div>
+  <aside class="next" aria-live="polite">
+    <p class="label">Next event starts in</p>
+    <h2 id="nextTitle">Loading…</h2>
+    <div class="clock" id="nextClock"></div>
+    <button class="btn ghost" id="nextBtn">View details</button>
+  </aside>
+</section>
+
+<section id="events" class="wrap">
+  <h2>Upcoming events</h2>
+  <div class="tools">
+    <input type="search" id="search" placeholder="Search by name, venue or keyword" aria-label="Search events">
+    <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+  </div>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>No events match your search. Try another keyword or choose All.</p>
+</section>
+
+<section id="registrations" class="wrap">
+  <h2>My registrations</h2>
+  <ul class="reglist" id="regList"></ul>
+</section>
+</main>
+
+<footer>© 2026 K Explore · Built with HTML, CSS and JavaScript</footer>
+
+<dialog id="modal" aria-labelledby="mTitle">
+  <button class="close" id="closeBtn" aria-label="Close">✕</button>
+  <div id="detail"></div>
+  <form id="form" novalidate>
+    <h3>Register for this event</h3>
+    <label>Full name<input name="name" id="name" autocomplete="name"><small class="err"></small></label>
+    <label>Email address<input name="email" id="email" type="email" autocomplete="email"><small class="err"></small></label>
+    <label>Phone number<input name="phone" id="phone" type="tel" autocomplete="tel" placeholder="10-digit mobile number"><small class="err"></small></label>
+    <label>Selected event<input id="evField" readonly></label>
+    <button class="btn" type="submit">Complete registration</button>
+  </form>
+  <div class="done" id="done" hidden>
+    <div class="tick">✓</div>
+    <h3 id="doneTitle">You're registered</h3>
+    <p id="doneMsg"></p>
+    <button class="btn" id="doneBtn">Back to events</button>
+  </div>
+</dialog>
+<script src="script.js"></script>
+</body>
+</html>
