@@ -2,7 +2,7 @@
 
 A responsive event website where users can explore upcoming events, view details and register.
 
-**Live site:** _add your Vercel / Netlify / GitHub Pages link here_
+**Live site:** https://swastika1910.github.io/k-explore/
 
 ## Features
 - Hero section with a live countdown to the next event
